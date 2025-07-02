@@ -6,6 +6,7 @@ function App() {
   const [range, setRange] = useState(5);
   const [sortMethode, setSortMethode] = useState("all");
 
+  // Utilisation de l'API pour récupérer les données des Pokémon
   useEffect(() => {
     async function fetchData() {
       const response = await fetch("http://localhost:3000/pokemon");
@@ -17,14 +18,13 @@ function App() {
     fetchData();
   }, []);
 
+  // Gestion des changements dans les champs de recherche, de plage et de tri
   const handleChangeInput = (e) => {
     setSearch(e.target.value);
   };
-
   const handleChangeRange = (e) => {
     setRange(e.target.value);
   };
-
   const handleChangeSort = (e) => {
     setSortMethode(e.target.value);
   };
@@ -48,7 +48,8 @@ function App() {
           max={10}
           onChange={handleChangeRange}
         />
-        <select name="" id="" onChange={handleChangeSort}>
+        
+        <select onChange={handleChangeSort}>
           <option value="all">-- Sort --</option>
           <option value="a.z">Name {"A->Z"}</option>
           <option value="z.a">Name {"Z->A"}</option>

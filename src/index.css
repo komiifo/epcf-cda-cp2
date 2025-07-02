@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+h1 {
+  margin: 40px;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+input {
+  background-color: white;
+  border: 1px;
+  border-radius: 8px;
+  padding: 6px;
+  margin: 0 18px;
+}
+
+select {
+  background-color: white;
+  border: 1px;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+img {
+  width: 90px;
+  margin: auto;
+}
+
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  width: 200px;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+    transform: translateY(-5px);
+  }
+}
+
+.listCard {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  background-color: gainsboro;
+}
